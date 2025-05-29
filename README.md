@@ -45,3 +45,33 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [MongoDB Documentation](https://docs.mongodb.com/)
 - [MongoDB University](https://university.mongodb.com/)
 - [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+
+
+
+# MongoDB Bookstore Setup
+
+## Quick Start
+
+1. Install dependencies:
+```bash
+npm install mongodb
+```
+2. Insert provided data:
+```bash
+node insert_books.js
+```
+3. Run "mongosh" in your terminal and use the newly created db:
+```bash
+mongosh
+use plp_bookstore
+```
+4. To run the queries in mongosh, first load them:
+```bash
+load('queries.js')
+```
+5. then run any of the imported queries, e.g:
+```bash
+basicQueries.findBooksByAuthor("George Orwell")
+basicQueries.updateBookPrice("1984", 12.50)
+advancedQueries.sortBooksByPrice(false)
+```
